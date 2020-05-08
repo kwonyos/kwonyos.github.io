@@ -4,7 +4,7 @@
   <head>
     <title>Yong Seok, Kwon</title>
     <meta charset="utf-8">
-    <link rel ="icon" href="image\head_icon.png" type="image/x-icon">
+    <link rel ="icon" href="images\head_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <style>
        img{
@@ -132,7 +132,7 @@
                     <div class="numbertext">1 / 3</div>
                     <div class="arrowAndImage">
                       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                      <img src="image\uav1.png" >
+                      <img src="images\uav1.png" >
                       <a class="next" onclick="plusSlides(1)">&#10095;</a>
                     </div>
                     <div class="caption">Schematic of path smoothing function</div>
@@ -142,7 +142,7 @@
                     <div class="numbertext">2 / 3</div>
                       <div class="arrowAndImage">
                       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                      <img src="image\uav2.png">
+                      <img src="images\uav2.png">
                       <a class="next" onclick="plusSlides(1)">&#10095;</a>
                     </div>
                     <div class="caption">Upright view of RRT dubin's path planner</div>
@@ -152,7 +152,7 @@
                     <div class="numbertext">3 / 3</div>
                     <div class="arrowAndImage">
                       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                      <img src="image\uav3.gif">
+                      <img src="images\uav3.gif">
                       <a class="next" onclick="plusSlides(1)">&#10095;</a>
                     </div>
                     <div class="caption">UAV flight under the smoothed path</div>
@@ -165,45 +165,8 @@
                   </div>
                 </div>
 
-<script>
-  var slideIndex = 1;
-  showSlides(slideIndex);
 
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
 
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-  }
-  function maxHeight(){
-    var images = document.getElementsByTagName("img");
-    var maxHeight=images[0].height/images[0].width*300;
-    for (i = 1; i < images.length; i++) {
-      if (maxHeight<images[i].height/images[i].width*300){
-        maxHeight=images[i].height/images[i].width*300;
-      }
-    }
-    return maxHeight;
-  }
-
-</script>
               </td>
               <td>
                 <p>
@@ -219,7 +182,7 @@
         <table>
           <tbody>
             <tr>
-              <td><img src="image\tdm3.gif"></td>
+              <td><img src="images\tdm3.gif"></td>
               <td>
                 <p>
                   This is a section for TDM project discription.

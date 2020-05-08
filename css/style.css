@@ -6,7 +6,7 @@ html {
   overflow-y: scroll;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: 'Roboto-Bold', arial, sans-serif;
 }
 body {
@@ -51,11 +51,13 @@ nav {
   font-family: 'Roboto-Bold', arial, sans-serif;
   padding: 15px;
   vertical-align: bottom;
+
 }
 nav ul{
   margin:0;
   padding: 3px 0 0 0;
   border-top-width: 2px;
+
 }
 nav li{
   display:inline;
