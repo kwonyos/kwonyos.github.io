@@ -9,9 +9,125 @@ html {
 h1, h2, h3, h4 {
   font-family: 'Roboto-Bold', arial, sans-serif;
 }
+a {
+  color:#99ccff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1{
+  font-size:30px;
+  margin:0px 0 20px 20px;
+}
+h2{
+  font-size:25px;
+}
+h3{
+  font-size:20px;
+}
+td{
+  vertical-align: top;
+
+}
+.paper-image{
+  width:150px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+}
+.paper-title{
+  font-weight: 600;
+  padding-bottom: 0px;
+}
+.paper-author{
+  color:#a6a6a6;
+  padding-bottom: 0px;
+}
+.paper-conference{
+  font-style: italic;
+  color:#a6a6a6;
+  padding-bottom: 0px;
+}
+.project-image{
+  width:150px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+}
+.project-title{
+  font-weight: 600;
+  padding-bottom: 0px;
+}
+.project-info{
+  color:#a6a6a6;
+  padding-bottom: 0px;
+}
+.project-content{
+  font-size: 13.9px;
+  
+  padding : 3px 0px 0px 25px;
+}
+.school-image{
+  width:80px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+}
+.school-name{
+  font-weight: 600;
+  padding-bottom: 0px;
+}
+.school-period{
+  color:#a6a6a6;
+  padding-bottom: 0px;
+}
+.school-degree{
+  font-style: italic;
+  color:#a6a6a6;
+  padding-bottom: 0px;
+}
+
+.job-image{
+  width:125px;
+}
+.job-name{
+  font-weight: 600;
+  padding-bottom: 0px;
+}
+.job-period{
+  color:#a6a6a6;
+  padding-bottom: 0px;
+}
+.job-position{
+  font-style: italic;
+  color:#a6a6a6;
+  padding-bottom: 0px;
+}
+
+.A{
+  color:#dcdcdc;
+  padding-bottom: 0px;
+}
+.myname{
+  font-weight: bold;
+}
+button {
+  font-weight: 600;
+  font-size:23px;
+  border: 0px;
+  color:#dcdcdc;
+  background-color: #ffffff;
+}
+button:hover{
+  color:#000000;
+  cursor:pointer;
+}
+.button-group{
+  padding-top:15px;
+  padding-bottom: 15px;
+}
+
 body {
   margin:0;
-  background-color: #f2f2f2;
   font-family: 'Roboto-Regular';
   line-height: 140%;
 }
@@ -83,12 +199,15 @@ section {
   padding: 0 25px 20px 25px;
   width: 800px;
   background-color: #ffffff;
-  border-radius: 0 0 7px 7px;
-  font-size: 16px;
+  font-size: 14px;
+  border-bottom: 1px solid #dcdcdc;
 }
+#profile {
+  padding-top: 5em;
+}
+
 article {
   padding-bottom: 15px;
-  border-bottom: 1px solid #dcdcdc;
 }
 h2 {
   margin:0;
@@ -100,22 +219,11 @@ h3 {
 p {
   margin: 0;
   padding: 0 0 10px 25px;
-  color: #828282;
 }
 footer {
   font-size: 15px;
   margin:20px 0 35px 0;
   text-align: center;
-}
-
-
-article a{
-  font-weight: bold;
-  font-family: 'Roboto-Bold', arial, sans-serif;
-  color: #828282;
-}
-article a:hover{
-  color: #000000;
 }
 
 

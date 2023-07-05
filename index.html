@@ -2,8 +2,13 @@
 <html>
   <head>
     <title>Yongseok Kwon</title>
-    <meta charset="utf-8">
-    <link rel ="icon" href="images\head_icon.png" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1000">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!--ICON-->
+    <link rel ="icon" href="images\umich.jpg" type="image/x-icon">
+    
+    <!-- STYLE -->
     <link rel="stylesheet" href="css/style.css">
     <style>
       .id{
@@ -25,41 +30,341 @@
       .jb-a:hover .jb-c {
         display: block;
       }
+      #gray {
+        color: #dcdcdc;
+      }
     </style>
   </head>
   <body>
-    <header>
-      <div id="headline"><h1><a href="index.html">Yongseok Kwon</a></h1></div>
-      <nav>
-        <ul>
-          <li><a href="index.html" id="here">Home</a> <span class="white">|</span></li>
-          <li><a href="about.html">About</a> <span class="white">|</span></li>
-          <li><a href="work.html">Work</a></li>
-        </ul>
-      </nav>
-    </header>
-
+    <section id="profile">
+        <article >
+            <table>
+                <tbody>
+                    <td valign="middle"><img src="images/yongseok.jpg" class="id"></td>      
+                    <td>
+                        <h1>Yongseok Kwon</h1>
+                        <p>
+                          I am a robot researcher at Republic of Korea Army Headquarters. Before joining the army, I worked in ROAHM Lab advised by Ram Vasudevan at the University of Michigan. Also, I received my BS(‘20) at UNIST in 2020, and a MS(‘22) at the University of Michigan.
+                        </p>
+                        <p>
+                          My research interest lies in safe reinforcement learning, task and motion planning, and mobile manipulation. My research goal is creating reliable deep learning-based algorithms to deploy autonomous robots closer to our daily lives. 
+                        </p>
+                    </td>
+                    
+                </tbody>
+            </table>
+            <a href="https://kwonyos.github.io/pdfs/Yongseok_Kwon_CV.pdf">CV</a>&nbsp;&nbsp;<span id="gray">&#8226;</span>&nbsp;
+            <a href="https://github.com/kwonyos">Github</a>&nbsp;&nbsp;<span id="gray">&#8226;</span>&nbsp;
+            <a href="https://scholar.google.co.kr/citations?hl=ko&user=ZvsmNz8AAAAJ&view_op=list_works&sortby=pubdate">G.Scholar</a>&nbsp;&nbsp;<span id="gray">&#8226;</span>&nbsp;
+            <a href="https://www.linkedin.com/in/yong-seok-kwon-6a18b31a7/">LinkedIn</a>
+            <br><br>
+            <span>kwonys [at] umich [dot] edu</span>
+        </article>
+    </section>
+    <section class="button-group">
+    
+      <button onclick="buttonResearch()">Research</button>
+      <button onclick="buttonAbout()">About</button>
+    </section>
+    <div id="Research">
     <section>
+      <h3>Publications</h3>
       <article>
-        <h2>Bio</h2>
-        <table>
-          <tbody>
-            <td><img src="images/yongseok.jpg" class="id" alt="images/yongseok1.jpg"></td>
-            <td>
-              <p>
-                I am a robot researcher at Republic of Korea Army Headquaters. My research interest lies in safe reinforcement learning, task and motion planning, and neural verification.
-              </p>
-              <p>
-                My hometown is Gyeongju, Republic of Korea, where I was born and raised.
-                
-                Before joining the army, I received a Bachelor degree at Ulsan National Institute of Science and Technology (UNIST) in 2020, and a Master degree at the University of Michigan in 2022.
-              </p>
-            </td>
-          </tbody>
-        </table>
-
+          <table>
+              <tbody>
+                  <td><img src="images/rdf.jpg" class="paper-image"></td>      
+                  <td valign="top">
+                      <p class="paper-title">
+                          Reachability-based Trajectory Design with Neural Implicit Safety Constraints
+                      </p>
+                      <p class="paper-author">
+                          Jonathan Michaux, Qingyi Chen, <span class="myname">Yongseok Kwon</span>, and Ram Vasudevan
+                      </p>
+                      <p class="paper-conference">
+                          Robotics: Science and Systems (RSS) 2023
+                      </p>
+                      <p class="A">
+                      <a href="https://roahmlab.github.io/RDF/">[webpage]</a>&nbsp;&#8226;
+                      <a href="https://arxiv.org/abs/2302.07352">[paper]</a>&nbsp;&#8226;
+                      <a href="https://github.com/roahmlab/RDF">[code]</a>&nbsp;
+                      </p>
+                  </td>
+                  
+              </tbody>
+          </table>
       </article>
     </section>
-    <footer> <small>Copyright &copy; 2020-2023 Yongseok Kwon</small> </footer>
+    <section> 
+        <h3>Projects</h3>   
+        <article>
+          <table>
+              <tbody>
+                  <td><img src="images/dt-mp.gif" class="project-image"></td>      
+                  <td valign="top">
+                      <p class="project-title">
+                          Transformer for Motion Planning
+                      </p>
+                      <p class="project-info">
+                          Fall 2021 at the University of Michigan<br> Advised by prof. Nima Fazeli
+                      </p>
+                      <p class="project-content">
+                        Applied decision transformer on reaching task of 7 DOF robot arm.
+                      </p>
+                  </td>
+                  
+              </tbody>
+          </table>
+      </article>
+      <article>
+        <table>
+            <tbody>
+                <td><img src="images/contact.gif" class="project-image"></td>      
+                <td valign="top">
+                    <p class="project-title">
+                        Contact Simulation
+                    </p>
+                    <p class="project-info">
+                        Fall 2021 at the University of Michigan<br> Advised by prof. Nima Fazeli
+                    </p>
+                    <p class="project-content">
+                      Implemented contact simulator with LCP constraint for computing contact force. 
+                    </p>
+                </td>
+                
+            </tbody>
+        </table>
+    </article>
+      <article>
+        <table>
+            <tbody>
+                <td><img src="images/sdc.gif" class="project-image"></td>      
+                <td valign="top">
+                    <p class="project-title">
+                        Trajectory Optimization for Autonoumous Car
+                    </p>
+                    <p class="project-info">
+                        Fall 2021 at the University of Michigan<br> Advised by prof. Ram Vasudevan
+                    </p>
+                    <p class="project-content">
+                      Implemented convex collision avoidance constraint for lane changing task of autonomous car.
+                    </p>
+                </td>
+                
+            </tbody>
+        </table>
+    </article>
+    <article>
+      <table>
+          <tbody>
+              <td><img src="images/ekf.gif" class="project-image"></td>      
+              <td valign="top">
+                  <p class="project-title">
+                    Extended Kalman Filter on Neural Gait Model
+                  </p>
+                  <p class="project-info">
+                      Fall 2021 at the University of Michigan<br> Advised by prof. Ram Vasudevan
+                  </p>
+                  <p class="project-content">
+                    Implemented extended Kalman filter on a gait measurement model trained with a neural network and tested the state estimation algorithm on an open-source robotic leg.  
+                  </p>
+              </td>
+              
+          </tbody>
+      </table>
+  </article>
+    <article>
+      <table>
+          <tbody>
+              <td><img src="images/uav.gif" class="project-image"></td>      
+              <td valign="top">
+                  <p class="project-title">
+                    UAV Navigation via Dubins Path Planning
+                  </p>
+                  <p class="project-info">
+                      Spring 2019 at UNIST<br> Advised by prof. Hyondong Oh
+                  </p>
+                  <p class="project-content">
+                    Implemented Dubins-curve based RRT to generate dynamically feasible path for UAV under kinodynamic constraints.
+                  </p>
+              </td>
+              
+          </tbody>
+      </table>
+      </article>
+      <article>
+        <table>
+            <tbody>
+                <td><img src="images/tdm.jpg" class="project-image"></td>      
+                <td valign="top">
+                    <p class="project-title">
+                      Dual-Epicyclic Gearset for Decoupling Tendon-Driven Mechanism 
+                    </p>
+                    <p class="project-info">
+                      2019 Fall at UNIST<br> Advised by prof. JoonbumBae
+                    </p>
+                    <p class="project-content">
+                      Designed dual-epicyclic gearset to solve motion-coupling of multi DOF tendon-driven mechanism.
+                    </p>
+                </td>
+                
+            </tbody>
+        </table>
+      </article>
+
+    </section>
+    </div>
+    <div id="About" style="display:none">
+    <section>
+      <h3>Education</h3>
+      <article>
+        <table>
+          <tbody>
+              <td><img src="images/umich.jpg" class="school-image"></td>      
+              <td valign="top">
+                  <p class="school-name">
+                    University of Michigan, Ann Arbor
+                  </p>
+                  <p class="school-period">
+                    August 202 &ndash; August 2022
+                  </p>
+                  <p class="school-degree">
+                    M.S.E in Mechanical Engineering
+                  </p>
+              </td>
+              
+          </tbody>
+      </table>
+      </article>
+      <article>
+        <table>
+          <tbody>
+              <td><img src="images/unist.png" class="school-image"></td>      
+              <td valign="top">
+                  <p class="school-name">
+                    Ulsan National Institute of Science and Technology (UNIST)
+                  </p>
+                  <p class="school-period">
+                    March 2016 &ndash; Februrary 2020
+
+                  </p>
+                  <p class="school-degree">
+                    B.S. in Mechanical Engineering, Human Factors Engineering
+                  </p>
+              </td>
+              
+          </tbody>
+      </table>
+      </article>
+    </section>
+    <section>
+      <h3>Experience</h3>
+      <article>
+        <table>
+          <tbody>
+              <td><img src="images/karcfi_logo.jpg" class="job-image"></td>      
+              <td valign="top">
+                  <p class="job-name">
+                    Korea Army Research Center for Future and Inovation (KARFI)
+                  </p>
+                  <p class="job-period">
+                    Februrary 2023 &ndash; Present
+                  </p>
+                  <p class="job-position">
+                    Robot Researcher
+                  </p>
+              </td>
+              
+          </tbody>
+      </table>
+      </article>
+      <article>
+        <table>
+          <tbody>
+              <td><img src="images/fcav_logo.jpg" class="job-image"></td>      
+              <td valign="top">
+                  <p class="job-name">
+                    Ford Center for Autonomous Vehicles (FCAV)
+                  </p>
+                  <p class="job-period">
+                    June 2023 &ndash; January 2023
+                  </p>
+                  <p class="job-position">
+                    Research Engineer
+                  </p>
+              </td>
+              
+          </tbody>
+      </table>
+      </article>
+      <article>
+        <table>
+          <tbody>
+              <td><img src="images/roahmlab_logo.jpg" class="job-image"></td>      
+              <td valign="top">
+                  <p class="job-name">
+                    Robotics and Optimization for Analysis of Human Motion (ROAHM) Lab
+                  </p>
+                  <p class="job-period">
+                    July 2021 &ndash; January 2023
+                  </p>
+                  <p class="job-position">
+                    Research Assistant
+                  </p>
+              </td>
+              
+          </tbody>
+      </table>
+      </article>
+      <article>
+        <table>
+          <tbody>
+              <td><img src="images/locolab_logo.jpg" class="job-image"></td>      
+              <td valign="top">
+                  <p class="job-name">
+                    Locomotor Control Systems (LOCO) Lab 
+                  </p>
+                  <p class="job-period">
+                    January 2021 &ndash; May 2021
+                  </p>
+                  <p class="job-position">
+                    Research Student
+                  </p>
+              </td>
+              
+          </tbody>
+      </table>
+      </article>
+      <article>
+        <table>
+          <tbody>
+              <td><img src="images/birclab_logo.jpg" class="job-image"></td>      
+              <td valign="top">
+                  <p class="job-name">
+                    Bio-Robotics and Control (BiRC) Lab
+                  </p>
+                  <p class="job-period">
+                    March 2019 &ndash; July 2019
+                  </p>
+                  <p class="job-position">
+                    Research Student
+                  </p>
+              </td>
+              
+          </tbody>
+      </table>
+      </article>
+    </section>
+    </div>
+    <footer> <small> Inspired by <a href="https://andyzeng.github.io/">Andy Zhang's webpage</a></small> </footer>
+    <script>
+      function buttonResearch() {
+        $('#Research').show()
+        $('#About').hide()
+      }
+      function buttonAbout() {
+        $('#Research').hide()
+        $('#About').show()
+      }
+    </script>
   </body>
 </html>
