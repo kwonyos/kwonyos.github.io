@@ -63,8 +63,8 @@
     </section>
     <section class="button-group">
     
-      <button onclick="buttonResearch()">Research</button>
-      <button onclick="buttonAbout()">About</button>
+      <button id="button-research" class="button" style="color:black" onclick="buttonResearch()">Research</button>
+      <button id="button-about" class="button" onclick="buttonAbout()">About</button>
     </section>
     <div id="Research">
     <section>
@@ -360,10 +360,26 @@
       function buttonResearch() {
         $('#Research').show()
         $('#About').hide()
+        $('#button-research').css("color","black")
+        $('#button-about').css("color","#dcdcdc")
+        $('#button-about').hover(function(){
+          $(this).css("color","black");
+          }, function(){
+          $(this).css("color","#dcdcdc")
+        })
+        $('#button-research').hover(function(){$(this).css("color","black");}, function(){$(this).css("color","black");})
       }
       function buttonAbout() {
         $('#Research').hide()
         $('#About').show()
+        $('#button-about').css("color","black")
+        $('#button-research').css("color","#dcdcdc")
+        $('#button-research').hover(function(){
+          $(this).css("color","black");
+          }, function(){
+          $(this).css("color","#dcdcdc")
+        })
+        $('#button-about').hover(function(){$(this).css("color","black");}, function(){$(this).css("color","black");})
       }
     </script>
   </body>
