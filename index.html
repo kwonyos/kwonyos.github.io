@@ -63,10 +63,10 @@
     </section>
     <section class="button-group">
     
-      <button id="button-research" class="button" style="color:black" onclick="buttonResearch()">Research</button>
-      <button id="button-about" class="button" onclick="buttonAbout()">About</button>
+      <button id="button-research" class="button" style="color:black" onclick="buttonSwitch(0)">Research</button>
+      <button id="button-about" class="button" onclick="buttonSwitch(1)">About</button>
     </section>
-    <div id="Research">
+    <div id="Research" class = "thread">
     <section>
       <h3>Publications</h3>
       <article>
@@ -213,7 +213,7 @@
 
     </section>
     </div>
-    <div id="About" style="display:none">
+    <div id="About" class = "thread" style="display:none">
     <section>
       <h3>Education</h3>
       <article>
@@ -357,29 +357,30 @@
     </div>
     <footer> <small> Inspired by <a href="https://andyzeng.github.io/">Andy Zhang's webpage</a></small> </footer>
     <script>
-      function buttonResearch() {
-        $('#Research').show()
-        $('#About').hide()
-        $('#button-research').css("color","black")
-        $('#button-about').css("color","#dcdcdc")
-        $('#button-about').hover(function(){
-          $(this).css("color","black");
-          }, function(){
-          $(this).css("color","#dcdcdc")
-        })
-        $('#button-research').hover(function(){$(this).css("color","black");}, function(){$(this).css("color","black");})
-      }
-      function buttonAbout() {
-        $('#Research').hide()
-        $('#About').show()
-        $('#button-about').css("color","black")
-        $('#button-research').css("color","#dcdcdc")
-        $('#button-research').hover(function(){
-          $(this).css("color","black");
-          }, function(){
-          $(this).css("color","#dcdcdc")
-        })
-        $('#button-about').hover(function(){$(this).css("color","black");}, function(){$(this).css("color","black");})
+      function buttonSwitch(thisButtonInd) {
+        var onColor = "black";
+        var offColor = "#dcdcdc";
+        var thisButtonID = '#'+$(".button")[thisButtonInd].id;
+        var thisThreadID = '#'+$(".thread")[thisButtonInd].id;
+        //alert($(".button").length)
+        $(thisButtonID).css("color",onColor);
+        $(thisButtonID).hover(function(){$(this).css("color",onColor);}, function(){$(this).css("color",onColor);});
+        $(thisThreadID).show();
+        var buttonInd = 0;
+        while(buttonInd<$(".button").length){
+          if(buttonInd != thisButtonInd){
+            otherButtonID = '#'+$(".button")[buttonInd].id;
+            otherThreadID = '#'+$(".thread")[buttonInd].id;
+            $(otherButtonID).css("color",offColor);
+            $(otherButtonID).hover(function(){
+              $(this).css("color",onColor);
+              }, function(){
+              $(this).css("color",offColor)
+            });
+            $(otherThreadID).hide();
+          }
+          buttonInd=buttonInd+1; 
+        }
       }
     </script>
   </body>
