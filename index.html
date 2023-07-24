@@ -369,8 +369,7 @@
         $(thisButtonID).css("color",onColor);
         $(thisButtonID).hover(function(){$(this).css("color",onColor);}, function(){$(this).css("color",onColor);});
         $(thisThreadID).show();
-        var buttonInd = 0;
-        while(buttonInd<$(".button").length){
+        for(let buttonInd = 0; buttonInd<$(".button").length; buttonInd++){
           if(buttonInd != thisButtonInd){
             otherButtonID = '#'+$(".button")[buttonInd].id;
             otherThreadID = '#'+$(".thread")[buttonInd].id;
@@ -382,7 +381,6 @@
             });
             $(otherThreadID).hide();
           }
-          buttonInd=buttonInd+1; 
         }
       }
     </script>
