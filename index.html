@@ -63,8 +63,8 @@
     </section>
     <section class="button-group">
     
-      <button id="button-research" class="button" style="color:black" onclick="buttonSwitch(0)">Research</button>
-      <button id="button-about" class="button" onclick="buttonSwitch(1)">About</button>
+      <button id="button-research" class="button" style="color:black" onclick="buttonSwitch(this)">Research</button>
+      <button id="button-about" class="button" onclick="buttonSwitch(this)">About</button>
     </section>
     <div id="Research" class = "thread">
     <section>
@@ -357,10 +357,13 @@
     </div>
     <footer> <small> Inspired by <a href="https://andyzeng.github.io/">Andy Zhang's webpage</a></small> </footer>
     <script>
-      function buttonSwitch(thisButtonInd) {
+      function buttonSwitch(self) {
         var onColor = "black";
         var offColor = "#dcdcdc";
+        var thisButtonInd = Object.keys($(".button")).map(function (key) { return $(".button")[key].id; }).indexOf(self.id);
         var thisButtonID = '#'+$(".button")[thisButtonInd].id;
+        
+
         var thisThreadID = '#'+$(".thread")[thisButtonInd].id;
         //alert($(".button").length)
         $(thisButtonID).css("color",onColor);
