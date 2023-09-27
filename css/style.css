@@ -27,10 +27,13 @@ h2{
 h3{
   font-size:20px;
 }
+
+
 td{
   vertical-align: top;
-
 }
+
+/* Paper */
 .paper-image{
   width:150px;
   border: 1px solid #dcdcdc;
@@ -49,6 +52,8 @@ td{
   color:#a6a6a6;
   padding-bottom: 0px;
 }
+
+/* Project */
 .project-image{
   width:150px;
   border: 1px solid #dcdcdc;
@@ -64,9 +69,10 @@ td{
 }
 .project-content{
   font-size: 13.9px;
-  
   padding : 3px 0px 0px 25px;
 }
+
+/* School */
 .school-image{
   width:80px;
   border: 1px solid #dcdcdc;
@@ -86,6 +92,7 @@ td{
   padding-bottom: 0px;
 }
 
+/* Job */
 .job-image{
   width:125px;
 }
@@ -103,6 +110,7 @@ td{
   padding-bottom: 0px;
 }
 
+
 .A{
   color:#dcdcdc;
   padding-bottom: 0px;
@@ -111,7 +119,7 @@ td{
   font-weight: bold;
 }
 button {
-  font-weight: 600;
+  font-weight: bold;
   font-size:23px;
   border: 0px;
   color:#dcdcdc;
@@ -132,68 +140,6 @@ body {
   line-height: 140%;
 }
 
-header{
-  background-color: #00274C;
-  display: grid ;
-  grid-template-columns: 1fr 250px;
-}
-header div{
-  display: inline;
-  padding: 20px;
-
-}
-header h1{
-  display: inline;
-}
-header a {
-  color:#ffffff;
-  text-decoration: none;
-  display: inline;
-
-}
-h1 a {
-  font-size:25px;
-  height: 40px;
-}
-h1 a:hover{
-  border-bottom: 2px solid white;
-}
-#headline{
-  padding: 15px 0 15px 40px;
-}
-nav {
-  font-size:18px;
-  font-weight:bold;
-  font-family: 'Roboto-Bold', arial, sans-serif;
-  padding: 15px;
-  vertical-align: bottom;
-
-}
-nav ul{
-  margin:0;
-  padding: 3px 0 0 0;
-  border-top-width: 2px;
-
-}
-nav li{
-  display:inline;
-}
-
-nav a:hover{
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
-}
-#here {
-  color:#FFCB05;
-}
-#here:hover {
-  border-top: 2px solid #FFCB05;
-  border-bottom: 2px solid #FFCB05;
-
-}
-.white {
-  color:#ffffff;
-}
 section {
   margin: auto;
   padding: 0 25px 20px 25px;
@@ -209,13 +155,6 @@ section {
 article {
   padding-bottom: 15px;
 }
-h2 {
-  margin:0;
-  padding: 20px 0 20px 0;
-}
-h3 {
-  padding-left: 8px;
-}
 p {
   margin: 0;
   padding: 0 0 10px 25px;
@@ -226,16 +165,6 @@ footer {
   text-align: center;
 }
 
-
-.italic{
-  font-style: italic;
-}
-.bold{
-  font-weight: bold;
-  font-family: 'Roboto-Bold', arial, sans-serif;
-}
-
-
 @media(max-width:850px) {
   section {
     margin: auto;
@@ -243,27 +172,11 @@ footer {
     width: 95%;
     padding: 0 2.5% 20px 2.5%;
   }
-  header{
-    background-color: #00274C;
-    display: grid;
-    grid-template-columns:auto;
-    grid-template-rows: 48px 45px;
-  }
-  #headline {
-    padding: 15px 0 5px 25px;
-  }
-  nav {
-    font-size:18px;
-    padding: 0 15px 15px 50px;
-    border-top-width: 2px;
-  }
+
 }
 @media(max-width:500px) {
   html{
     overflow-x: auto;
-  }
-  header{
-    width:500px;
   }
   section {
     width: 475px;
