@@ -174,12 +174,12 @@ footer {
   }
 
 }
-@media(max-width:500px) {
+@media(max-width:200px) {
   html{
     overflow-x: auto;
   }
   section {
-    width: 445px;
-    padding: 0 27.5px 20px 27.5px;
+    width: 178px;
+    padding: 0 11px 20px 11px;
   }
 }
