@@ -174,3 +174,12 @@ footer {
   }
 
 }
+@media(max-width:500px) {
+  html{
+    overflow-x: clip;
+  }
+  section {
+    width: 455px;
+    padding: 0 27.5px 20px 27.5px;
+  }
+}
