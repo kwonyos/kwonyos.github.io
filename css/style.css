@@ -169,8 +169,8 @@ footer {
   section {
     margin: auto;
     position: relative;
-    width: 95%;
-    padding: 0 2.5% 20px 2.5%;
+    width: 89%;
+    padding: 0 5.5% 20px 5.5%;
   }
 
 }
@@ -179,7 +179,7 @@ footer {
     overflow-x: auto;
   }
   section {
-    width: 475px;
-    padding: 0 12.5px 20px 12.5px;
+    width: 445px;
+    padding: 0 27.5px 20px 27.5px;
   }
 }
