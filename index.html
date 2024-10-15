@@ -1,13 +1,13 @@
 <!doctype html> 
-<html>
+<html lang="en">
   <head>
     <title>Yongseok Kwon</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-  
-    <!--ICON-->
-    <link rel ="icon" href="images\umich.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel ="icon" href="images\umich.jpg" type="image/x-icon">
     
     <!-- STYLE -->
     <link rel="stylesheet" href="css/style.css">
@@ -31,26 +31,39 @@
                     <td>
                         <h1>Yongseok Kwon</h1>
                         <p>
-                          I am a robotics researcher at the Republic of Korea Army Headquarters. Before joining the army, I worked in <a href="https://www.roahmlab.com/">ROAHM Lab</a> advised by Ram Vasudevan at the University of Michigan. Also, I received my BS(‘20) at UNIST, and MS(‘22) at the University of Michigan.
+                          I am a robotics researcher in the <a href="https://www.roahmlab.com/">ROAHM Lab</a>, where I advised by <a href="https://www.roahmlab.com/ram-personal">Prof. Ram Vasudevan</a>. Also, I received my BS(‘20) at UNIST, and MS(‘22) at the University of Michigan.
                         </p>
                         <p>
-                          My research interests lie in safe reinforcement learning, task and motion planning, and neural verification. My research goal is to create reliable deep learning-based algorithms to deploy autonomous robots closer to our daily lives.
-                        </p>
+                          My research aims to create reliable and safe algorithms that bring autonomous robots into our daily lives. 
+                          To achieve this, I focus on developing methods that identify, represent, and enforce safety constraints for variety of robotic tasks, ensuring the reliable deployment of robotics in real-world applications
+                        </p>   
                     </td>
                     
                 </tbody>
             </table>
-            <a href="https://kwonyos.github.io/pdfs/CV_Yongseok_Kwon.pdf">CV</a>&nbsp;&nbsp;<span id="gray">&#8226;</span>&nbsp;
-            <a href="https://github.com/kwonyos">Github</a>&nbsp;&nbsp;<span id="gray">&#8226;</span>&nbsp;
-            <a href="https://scholar.google.co.kr/citations?view_op=list_works&hl=ko&authuser=1&user=ozCRJGkAAAAJ">G.Scholar</a>&nbsp;&nbsp;<span id="gray">&#8226;</span>&nbsp;
-            <a href="https://www.linkedin.com/in/yong-seok-kwon-6a18b31a7/">LinkedIn</a>
+            <a href="https://kwonyos.github.io/pdfs/CV_Yongseok_Kwon.pdf">
+              <i class="fa-solid fa-file-pdf"></i> CV
+            </a>
+            &nbsp;<span id="gray">&#8226;</span>&nbsp;&nbsp;
+            <a href="https://github.com/kwonyos">
+              <i class="fa-brands fa-github"></i> Github
+            </a>
+            &nbsp;<span id="gray">&#8226;</span>&nbsp;&nbsp;
+            <a href="https://scholar.google.co.kr/citations?view_op=list_works&hl=ko&authuser=1&user=ozCRJGkAAAAJ">
+              <i class="fa-solid fa-graduation-cap"></i>
+              G. Scholar
+            </a>
+            &nbsp;<span id="gray">&#8226;</span>&nbsp;&nbsp;
+            <a href="https://www.linkedin.com/in/yong-seok-kwon-6a18b31a7/">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
             <br><br>
-            <span>kwonys [at] umich [dot] edu</span>
+            <span> kwonys [at] umich [dot] edu</span>
         </article>
     </section>
     <section class="button-group">
     
-      <button id="button-research" class="button" style="color:black" onclick="buttonSwitch(this)">Research</button>
+      <button id="button-research" class="button" style="color:black;" onclick="buttonSwitch(this)">Research</button>
       <button id="button-about" class="button" onclick="buttonSwitch(this)">About</button>
     </section>
     <div id="Research" class = "thread">
@@ -59,29 +72,109 @@
       <article>
           <table>
               <tbody>
-                  <td><img src="images/rdf.jpg" class="paper-image"></td>      
+                  <td>
+                    <a href="https://roahmlab.github.io/crows/">
+                      <img src="images/crows.gif" class="paper-video">
+                    </a>
+                  </td>      
                   <td valign="top">
                       <p class="paper-title">
-                          Reachability-based Trajectory Design with Neural Implicit Safety Constraints
+                        <a href="https://roahmlab.github.io/crows/">Conformalized Reachable Sets for Obstacle Avoidance With Spheres</a>
+                      </p>
+                      <p class="paper-author">
+                          <span class="myname">Yongseok Kwon</span>, Jonathan Michaux, Seth Isaacson, Bohao Zhang, Matthew Ejakov, Katherine A. Skinner, and Ram Vasudevan
+                      </p>
+                      <p class="paper-conference">
+                          In Submission, 2024
+                      </p>
+                      <p class="A">
+                      <a href="https://roahmlab.github.io/crows/">
+                        <i class="fa-solid fa-link"></i> project page
+                      </a>
+                      &nbsp;&#8226;&nbsp;
+                      <a href="https://arxiv.org/abs/2410.09924">
+                        <i class="fa-regular fa-file"></i> paper
+                      </a>
+                      &nbsp;&#8226;&nbsp;
+                      <a href="https://github.com/roahmlab/crows">
+                        <i class="fa-brands fa-github"></i> code
+                      </a>
+                      &nbsp;
+                      </p>
+                  </td>
+              </tbody>
+          </table>
+      </article>
+
+      <article>
+          <table>
+              <tbody>
+                  <td>
+                    <a href="https://roahmlab.github.io/RDF/">
+                      <img src="images/rdf.jpg" class="paper-image">
+                    </a>
+                  </td>      
+                  <td valign="top">
+                      <p class="paper-title">
+                        <a href="https://roahmlab.github.io/RDF/">Reachability-based Trajectory Design with Neural Implicit Safety Constraints</a>
                       </p>
                       <p class="paper-author">
                           Jonathan Michaux, Qingyi Chen, <span class="myname">Yongseok Kwon</span>, and Ram Vasudevan
                       </p>
                       <p class="paper-conference">
-                          Robotics: Science and Systems (RSS) 2023
+                        <i>Robotics: Science and Systems (RSS)</i>, 2023
                       </p>
                       <p class="A">
-                      <a href="https://roahmlab.github.io/RDF/">[webpage]</a>&nbsp;&#8226;
-                      <a href="https://arxiv.org/abs/2302.07352">[paper]</a>&nbsp;&#8226;
-                      <a href="https://github.com/roahmlab/RDF">[code]</a>&nbsp;
+                      <a href="https://roahmlab.github.io/RDF/">
+                        <i class="fa-solid fa-link"></i> project page
+                      </a>
+                      &nbsp;&#8226;&nbsp;
+                      <a href="https://arxiv.org/abs/2302.07352">
+                        <i class="fa-regular fa-file"></i> paper
+                      </a>
+                      &nbsp;&#8226;&nbsp;
+                      <a href="https://github.com/roahmlab/RDF">
+                        <i class="fa-brands fa-github"></i> code
+                      </a>
+                      &nbsp;
                       </p>
-                  </td>
-                  
+                  </td>                  
               </tbody>
           </table>
       </article>
     </section>
     <section> 
+        <h3>Libraries</h3>   
+        <article>
+          <table>
+              <tbody>
+                  <td><a href="https://github.com/roahmlab/zonopy"><img src="images/zonopy.gif" class="library-image"></a></td>      
+                  <td valign="top">
+                      <p class="library-title">
+                        <a href="https://github.com/roahmlab/zonopy">
+                          ZONOPY: Zonotopes in Python
+                        </a>
+                      </p>
+                      <p class="library-content">
+                        A Python library for handling various continuous sets (e.g., intervals, zonotopes, and polynomial zonotopes) to compute reachable sets in robotic arm kinematics and dynamics, with support for parallel computation.
+                      </p>
+                      <p class="A">
+                        <span class="library-item">&#9656; zonopy&thinsp;:&nbsp;</span> 
+                        <a href="https://github.com/roahmlab/zonopy"><i class="fa-brands fa-github"></i> code</a>&nbsp;&nbsp;&#8226;&nbsp;
+                        <a href="https://roahmlab.github.io/zonopy/latest/"><i class="fa-solid fa-book"></i> documentation</a>&nbsp;
+                      </p>
+                      <p class="A">
+                        <span class="library-item">&#9656; zonopy-robots&thinsp;:&nbsp;</span> 
+                        <a href="https://github.com/roahmlab/zonopy-robots"><i class="fa-brands fa-github"></i> code</a>&nbsp;&nbsp;&#8226;&nbsp;
+                        <a href="https://roahmlab.github.io/zonopy-robots/latest/"><i class="fa-solid fa-book"></i> documentation</a>&nbsp;
+                      </p>
+                  </td>
+                  
+              </tbody>
+          </table>
+        </article>
+      </section>
+      <section> 
         <h3>Projects</h3>   
         <article>
           <table>
@@ -89,13 +182,13 @@
                   <td><img src="images/dt-mp.gif" class="project-image"></td>      
                   <td valign="top">
                       <p class="project-title">
-                          Transformer for Motion Planning
+                        Transformer for Reaching Task
                       </p>
                       <p class="project-info">
-                          Fall 2021 at the University of Michigan<br> Advised by prof. Nima Fazeli
+                        Fall 2021 at the University of Michigan
                       </p>
                       <p class="project-content">
-                        Applied decision transformer on reaching task of 7 DOF robot arm.
+                        Trained a Decision Transformer for the reaching task of a 7-DOF robotic arm using an offline reinforcement learning
                       </p>
                   </td>
                   
@@ -111,7 +204,7 @@
                       Contact Simulation via Linear Complementary Problem 
                     </p>
                     <p class="project-info">
-                        Fall 2021 at the University of Michigan<br> Advised by prof. Nima Fazeli
+                        Fall 2021 at the University of Michigan
                     </p>
                     <p class="project-content">
                       Implemented contact simulator with LCP (Linear Complementary Problem) formulation of contact dynamics. 
@@ -130,7 +223,7 @@
                         Trajectory Optimization for Autonoumous Car
                     </p>
                     <p class="project-info">
-                        Fall 2021 at the University of Michigan<br> Advised by prof. Ram Vasudevan
+                        Fall 2021 at the University of Michigan
                     </p>
                     <p class="project-content">
                       Implemented convex collision avoidance constraint for lane changing task of autonomous car.
@@ -149,7 +242,7 @@
                     Extended Kalman Filter on Neural Gait Model
                   </p>
                   <p class="project-info">
-                      Fall 2021 at the University of Michigan<br> Advised by prof. Robert D. Gregg
+                      Fall 2021 at the University of Michigan
                   </p>
                   <p class="project-content">
                     Implemented extended Kalman filter on a gait measurement model trained with a neural network and tested the state estimation algorithm on an open-source robotic leg.  
@@ -168,10 +261,10 @@
                     UAV Navigation via Dubins Path Planning
                   </p>
                   <p class="project-info">
-                      Spring 2019 at UNIST<br> Advised by prof. Hyondong Oh
+                      Spring 2019 at UNIST
                   </p>
                   <p class="project-content">
-                    Implemented Dubins-curve based RRT to generate paths for UAV under kinematic constraints.
+                    Implemented Dubins-curve based RRT to generate paths for UAV under kino-dynamic constraints.
                   </p>
               </td>
               
@@ -187,7 +280,7 @@
                       Dual-Epicyclic Gearset for Decoupling Tendon-Driven Mechanism 
                     </p>
                     <p class="project-info">
-                      2019 Fall at UNIST<br> Advised by prof. JoonbumBae
+                      2019 Fall at UNIST
                     </p>
                     <p class="project-content">
                       Designed dual-epicyclic gearset to solve motion-coupling of multi DOF tendon-driven mechanism.
@@ -212,7 +305,7 @@
                     University of Michigan, Ann Arbor
                   </p>
                   <p class="school-period">
-                    August 202 &ndash; August 2022
+                    August 2020 &ndash; August 2022
                   </p>
                   <p class="school-degree">
                     M.S.E in Mechanical Engineering
@@ -248,60 +341,42 @@
       <article>
         <table>
           <tbody>
-              <td><img src="images/karcfi_logo.jpg" class="job-image"></td>      
-              <td valign="top">
-                  <p class="job-name">
-                    Korea Army Research Center for Future and Innovation (KARCFI)
-                  </p>
-                  <p class="job-period">
-                    Februrary 2023 &ndash; Present
-                  </p>
-                  <p class="job-position">
-                    Robotics Researcher
-                  </p>
-              </td>
-              
-          </tbody>
-      </table>
-      </article>
-      <article>
-        <table>
-          <tbody>
-              <td><img src="images/fcav_logo.jpg" class="job-image"></td>      
-              <td valign="top">
-                  <p class="job-name">
-                    Ford Center for Autonomous Vehicles (FCAV)
-                  </p>
-                  <p class="job-period">
-                    June 2023 &ndash; January 2023
-                  </p>
-                  <p class="job-position">
-                    Research Engineer
-                  </p>
-              </td>
-              
-          </tbody>
-      </table>
-      </article>
-      <article>
-        <table>
-          <tbody>
               <td><img src="images/roahmlab_logo.jpg" class="job-image"></td>      
               <td valign="top">
                   <p class="job-name">
                     Robotics and Optimization for Analysis of Human Motion (ROAHM) Lab
                   </p>
                   <p class="job-period">
-                    July 2021 &ndash; January 2023
+                    July 2021 &ndash; January 2023, &nbsp;August 2024 &ndash; Present
                   </p>
                   <p class="job-position">
-                    Research Assistant
+                    Researcher
+                  </p>
+              </td>
+          </tbody>
+      </table>
+      </article>
+
+      <article>
+        <table>
+          <tbody>
+              <td><img src="images/karcfi_logo.jpg" class="job-image"></td>      
+              <td valign="top">
+                  <p class="job-name">
+                    Korea Army Research Center for Future and Innovation (KARCFI)
+                  </p>
+                  <p class="job-period">
+                    Februrary 2023 &ndash; August 2024
+                  </p>
+                  <p class="job-position">
+                    Robotics Researcher (Mandatory Military Obligation)
                   </p>
               </td>
               
           </tbody>
       </table>
       </article>
+
       <article>
         <table>
           <tbody>

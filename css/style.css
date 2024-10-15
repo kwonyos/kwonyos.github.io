@@ -1,6 +1,13 @@
 @font-face {font-family:Roboto-Regular; src: url('../fonts/Roboto-Regular.ttf');}
 @font-face {font-family:Roboto-Bold; src: url('../fonts/Roboto-Bold.ttf');}
 
+:root {
+  --grey-0: #494949;
+  --grey-1: #707070;
+  --grey-2: #969696;
+  --grey-3: #dcdcdc;
+}
+
 
 html {
   overflow-y: scroll;
@@ -10,22 +17,23 @@ h1, h2, h3, h4 {
   font-family: 'Roboto-Bold', arial, sans-serif;
 }
 a {
-  color:#99ccff;
+  color:#65b2ff;
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
+  color:#ffc965;
 }
 
 h1{
-  font-size:30px;
+  font-size:35px;
   margin:0px 0 20px 20px;
 }
 h2{
-  font-size:25px;
+  font-size:32px;
 }
+
 h3{
-  font-size:20px;
+  font-size:23px;
 }
 
 
@@ -35,60 +43,90 @@ td{
 
 /* Paper */
 .paper-image{
-  width:150px;
-  border: 1px solid #dcdcdc;
-  border-radius: 8px;
+  width:154px;
+  padding: 8px;
+  border: 1px solid var(--grey-3);
+  border-radius: 6px;
+}
+.paper-video{
+  width:170px;
+  border: 1px solid var(--grey-3);
+  border-radius: 6px;
 }
 .paper-title{
+  font-size: 15.2px;
   font-weight: 600;
-  padding-bottom: 0px;
+  padding-bottom: 4px;
 }
 .paper-author{
-  color:#a6a6a6;
+  color:var(--grey-2);
   padding-bottom: 0px;
 }
 .paper-conference{
-  font-style: italic;
-  color:#a6a6a6;
+  color:var(--grey-2);
   padding-bottom: 0px;
 }
-
+.myname{
+  font-weight: bold;
+  color:var(--grey-1);
+}
+/* Library */
+.library-image{
+  width:170px;
+  border: 1px solid var(--grey-3);
+  border-radius: 6px;
+}
+.library-title{
+  font-size: 15.2px;
+  font-weight: 600;
+  padding-bottom: 4px;
+}
+.library-content{
+  color:var(--grey-1);
+  padding-bottom: 0px;
+}
+.library-item{
+  color:var(--grey-2);
+  padding-bottom: 0px;
+}
 /* Project */
 .project-image{
-  width:150px;
-  border: 1px solid #dcdcdc;
-  border-radius: 8px;
+  width:170px;
+  border: 1px solid var(--grey-3);
+  border-radius: 6px;
 }
 .project-title{
+  font-size: 15.2px;
   font-weight: 600;
-  padding-bottom: 0px;
+  padding-bottom: 4px;
 }
 .project-info{
-  color:#a6a6a6;
+  color:var(--grey-2);
   padding-bottom: 0px;
 }
 .project-content{
-  font-size: 13.9px;
-  padding : 3px 0px 0px 25px;
+  font-size: 14px;
+  color:var(--grey-1);
+  padding-bottom: 0px;
 }
 
 /* School */
 .school-image{
   width:80px;
-  border: 1px solid #dcdcdc;
+  border: 1px solid var(--grey-3);
   border-radius: 8px;
 }
 .school-name{
+  font-size: 15.2px;
   font-weight: 600;
-  padding-bottom: 0px;
+  padding-bottom: 4px;
 }
 .school-period{
-  color:#a6a6a6;
+  color:var(--grey-2);
   padding-bottom: 0px;
 }
 .school-degree{
-  font-style: italic;
-  color:#a6a6a6;
+  color:var(--grey-2);
   padding-bottom: 0px;
 }
 
@@ -97,32 +135,32 @@ td{
   width:125px;
 }
 .job-name{
+  font-size: 15.2px;
   font-weight: 600;
-  padding-bottom: 0px;
+  padding-bottom: 4px;
 }
 .job-period{
-  color:#a6a6a6;
+  color:var(--grey-2);
   padding-bottom: 0px;
 }
 .job-position{
-  font-style: italic;
-  color:#a6a6a6;
+  color:var(--grey-2);
   padding-bottom: 0px;
 }
 
 
 .A{
-  color:#dcdcdc;
+  color:var(--grey-3);
   padding-bottom: 0px;
 }
-.myname{
-  font-weight: bold;
-}
+
 button {
   font-weight: bold;
-  font-size:23px;
+  font-size:26px;
   border: 0px;
-  color:#dcdcdc;
+  padding: 0px;
+  margin: 0 15px 0px 0px;
+  color:var(--grey-3);
   background-color: #ffffff;
 }
 button:hover{
@@ -130,6 +168,7 @@ button:hover{
   cursor:pointer;
 }
 .button-group{
+
   padding-top:15px;
   padding-bottom: 15px;
 }
@@ -146,7 +185,7 @@ section {
   width: 800px;
   background-color: #ffffff;
   font-size: 14px;
-  border-bottom: 1px solid #dcdcdc;
+  border-bottom: 1px solid var(--grey-3);
 }
 #profile {
   padding-top: 5em;
