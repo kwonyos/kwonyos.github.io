@@ -6,6 +6,12 @@
   --grey-1: #707070;
   --grey-2: #969696;
   --grey-3: #dcdcdc;
+  --blue: #65b2ff;
+  --orange: #ffc965;
+  --red: #ff3164;
+  --green: #7eeb68fd;
+  --sun: #ff9e67;
+  --moon: #fff567;
 }
 
 
@@ -17,11 +23,11 @@ h1, h2, h3, h4 {
   font-family: 'Roboto-Bold', arial, sans-serif;
 }
 a {
-  color:#65b2ff;
+  color:var(--blue);
   text-decoration: none;
 }
 a:hover {
-  color:#ffc965;
+  color:var(--orange);
 }
 
 h1{
