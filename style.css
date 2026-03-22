@@ -219,6 +219,8 @@ button.button-active,
   color: var(--grey-1);
 }
 
+.label-mobile { display: none; }
+
 /* ─── Theme toggle ───────────────────────────────────── */
 #theme-toggle {
   position: fixed;
@@ -260,8 +262,8 @@ button.button-active,
 [data-theme="dark"] .myname            { color: #999; }
 [data-theme="dark"] .paper-gif,
 [data-theme="dark"] .paper-img,
-[data-theme="dark"] .software-img      { border-color: #2a2a2a; }
-[data-theme="dark"] .school-logo       { border-color: #2a2a2a; }
+[data-theme="dark"] .software-img,
+[data-theme="dark"] .school-logo       { border-color: #1e2130; }
 [data-theme="dark"] footer             { color: #777; }
 .logo-dark                             { display: none; }
 [data-theme="dark"] .logo-light        { display: none; }
@@ -335,7 +337,7 @@ button.button-active,
     width: auto;
     max-width: 100%;
     margin: 6px auto 0;
-    font-size: 12.5px;
+    font-size: 12px;
   }
 
   #About .entry-title,
@@ -385,6 +387,10 @@ button.button-active,
   .mobile-left-entries .entry-links {
     word-break: normal;
   }
+
+  .label-desktop { display: none; }
+  .label-mobile { display: inline; }
+
 
   .mobile-left-entries .entry-body p {
     padding-left: 0;
