@@ -95,6 +95,17 @@ footer {
 .profile-links {
   align-items: center;
 }
+.profile-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.18em;
+}
+.profile-links a i {
+  font-size: 1em;
+}
+.profile-link-text {
+  display: inline;
+}
 .profile-item {
   display: inline-flex;
   align-items: center;
@@ -116,7 +127,7 @@ footer {
   width: 100%;
   padding-top: 2px;
 }
-.sep { color: #999;}
+.sep { color: #e0e0e0;}
 
 /* ─── Buttons ────────────────────────────────────────── */
 .button-group { padding: 14px 28px; max-width: 800px;}
@@ -133,7 +144,9 @@ button {
   cursor: pointer;
 }
 button:hover,
-button.button-active { color: #000; }
+button.button-active,
+[data-theme="light"] button:hover,
+[data-theme="light"] button.button-active { color: #000; }
 
 /* ─── Entry layout (papers, education, experience) ───── */
 .entry {
@@ -284,7 +297,6 @@ button.button-active { color: #000; }
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: 12px;
   }
   .profile-links {
     display: flex;
@@ -293,9 +305,16 @@ button.button-active { color: #000; }
     align-items: center;
     width: auto;
     max-width: 100%;
-    gap: 0 6px;
+    gap: 0 10px;
     margin: 0 auto;
     text-align: center;
+  }
+  .profile-links .profile-link-text {
+    display: none;
+  }
+  .profile-links a {
+    font-size: 20px;
+    padding: 2px 4px;
   }
   .profile-item {
     justify-content: center;

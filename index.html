@@ -23,20 +23,20 @@
         <img src="assets/yongseok.jpg" class="profile-pic" alt="Yongseok Kwon">
         <div class="profile-contact">
           <div class="profile-links">
-            <a href="https://scholar.google.co.kr/citations?view_op=list_works&hl=ko&authuser=1&user=ozCRJGkAAAAJ">
-              <i class="fa-brands fa-google-scholar"></i> G. Scholar
+            <a href="https://scholar.google.co.kr/citations?view_op=list_works&hl=ko&authuser=1&user=ozCRJGkAAAAJ" aria-label="Google Scholar">
+              <i class="fa-brands fa-google-scholar"></i><span class="profile-link-text"> G. Scholar</span>
             </a>
             <span class="sep">•</span>
-            <a href="https://github.com/kwonyos">
-              <i class="fa-brands fa-github"></i> GitHub
+            <a href="https://github.com/kwonyos" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i><span class="profile-link-text"> GitHub</span>
             </a>
             <span class="sep">•</span>
-            <a href="https://www.linkedin.com/in/yong-seok-kwon-6a18b31a7/">
-              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            <a href="https://www.linkedin.com/in/yong-seok-kwon-6a18b31a7/" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i><span class="profile-link-text"> LinkedIn</span>
             </a>
             <span class="sep">•</span>
-            <a href="https://x.com/kwonyos">
-              <i class="fa-brands fa-x-twitter"></i> X/Twitter
+            <a href="https://x.com/kwonyos" aria-label="X/Twitter">
+              <i class="fa-brands fa-x-twitter"></i><span class="profile-link-text"> X/Twitter</span>
             </a>
           </div>
           <p class="profile-email profile-item"><i class="fa-solid fa-envelope"></i>&nbsp; kwonys [at] seas [dot] upenn [dot] edu</p>
@@ -212,21 +212,20 @@
         });
       }
 
-      function toggleTheme() {
-        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        document.documentElement.setAttribute('data-theme', isDark ? '' : 'dark');
-        document.querySelector('#theme-toggle i').className = isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
-        localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      function applyDefaultTheme() {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+        document.querySelector('#theme-toggle i').className = prefersDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
       }
 
-      (function () {
-        const saved = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (saved === 'dark' || (!saved && prefersDark)) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          document.querySelector('#theme-toggle i').className = 'fa-solid fa-sun';
-        }
-      })();
+      function toggleTheme() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+        document.querySelector('#theme-toggle i').className = isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+      }
+
+      applyDefaultTheme();
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyDefaultTheme);
     </script>
   </body>
 </html>
