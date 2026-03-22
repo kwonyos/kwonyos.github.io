@@ -1,346 +1,230 @@
-<!doctype html> 
+<!doctype html>
 <html lang="en">
   <head>
     <title>Yongseok Kwon</title>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
-    <link rel ="icon" href="assets/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
-    <!-- STYLE -->
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-      .logo-cell {
-        text-align: center;        /* horizontal centering */
-        vertical-align: middle;    /* vertical centering */
-      }
-      .id-pic{
-        width:135px;
-        border: 1px solid #dcdcdc;
-        border-radius: 10px;
-      }
-      #gray {
-        color: #dcdcdc;
-      }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+
+    <button id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <!-- ── Profile ───────────────────────────────────────── -->
     <section id="profile">
-        <article >
-            <h1>Yongseok Kwon</h1>
-            <table>
-                <tbody>
-                    <td valign="middle"><img src="assets/yongseok.jpg" class="id-pic"></td>      
-                    <td>
-                        
-                        <p>
-                          I'm a Ph.D. student at the University of Pennsylvania, advised by <a href="https://www.seas.upenn.edu/~rhollada/"> Prof. Rachel Holladay</a>. 
-                          Previously, I received my MS at the University of Michigan, advised by <a href="https://www.roahmlab.com/ram-personal"> Prof. Ram Vasudevan</a>.
-
-                        </p>
-                        <p>
-                          My research aims to develop reliable algorithms that enable robots to perform a wide range of manipulation tasks. 
-                          To achieve this, I focus on designing efficient representations of world models and developing robust planners/policies that account for the uncertainty inherent in these world models.
-                        </p>
-                    </td>
-                    
-                </tbody>
-            </table>
-            <div style="margin-top: 4px;"></div>
-            <!-- <a href="pdfs/CV_Yongseok_Kwon.pdf">
-              <i class="fa-solid fa-file-pdf"></i> CV
-            </a>
-            &nbsp;<span id="gray">&#8226;</span>&nbsp; -->
+      <h1>Yongseok Kwon</h1>
+      <div class="profile-row">
+        <img src="assets/yongseok.jpg" class="profile-pic" alt="Yongseok Kwon">
+        <div class="profile-contact">
+          <div class="profile-links">
             <a href="https://scholar.google.co.kr/citations?view_op=list_works&hl=ko&authuser=1&user=ozCRJGkAAAAJ">
-              <!-- <i class="ai ai-google-scholar" style="font-size: 20px; vertical-align: -1.5px;"></i> -->
-              <i class="fa-brands fa-google-scholar" style="font-size: 14.5px; vertical-align: .8px;"></i> 
-              G. Scholar
+              <i class="fa-brands fa-google-scholar"></i> G. Scholar
             </a>
-
-            &nbsp;<span id="gray">&#8226;</span>&nbsp;
+            <span class="sep">•</span>
             <a href="https://github.com/kwonyos">
-              <i class="fa-brands fa-github" style="font-size: 16px;"></i> GitHub
+              <i class="fa-brands fa-github"></i> GitHub
             </a>
-            &nbsp;<span id="gray">&#8226;</span>&nbsp;
+            <span class="sep">•</span>
             <a href="https://www.linkedin.com/in/yong-seok-kwon-6a18b31a7/">
-              <i class="fa-brands fa-linkedin" style="font-size: 16px;"></i> LinkedIn
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
             </a>
-            &nbsp;<span id="gray">&#8226;</span>&nbsp;
+            <span class="sep">•</span>
             <a href="https://x.com/kwonyos">
-              <i class="fa-brands fa-x-twitter" style="font-size: 16px;"></i> X/Twitter
+              <i class="fa-brands fa-x-twitter"></i> X/Twitter
             </a>
-            <div style="margin-top: 10px;"></div>
-            <span style="color:var(--grey-2);"> <i class="fa-solid fa-envelope"></i> &nbsp;kwonys [at] seas [dot] upenn [dot] edu</span>
-        </article>
+          </div>
+          <p class="profile-email profile-item"><i class="fa-solid fa-envelope"></i>&nbsp; kwonys [at] seas [dot] upenn [dot] edu</p>
+        </div>
+        <div class="profile-text">
+          <p>I'm a Ph.D. student at the University of Pennsylvania, advised by <a href="https://www.seas.upenn.edu/~rhollada/">Prof. Rachel Holladay</a>. Previously, I received my MS at the University of Michigan, advised by <a href="https://www.roahmlab.com/ram-personal">Prof. Ram Vasudevan</a>.</p>
+          <p>My research aims to develop reliable algorithms that enable robots to perform a wide range of manipulation tasks. To achieve this, I focus on designing efficient representations of world models and developing robust planners/policies that account for the uncertainty inherent in these world models.</p>
+        </div>
+      </div>
     </section>
+
+    <!-- ── Navigation ─────────────────────────────────────── -->
     <section class="button-group">
-      <button id="button-research" class="button" style="color:black;" onclick="buttonSwitch(this)">Research</button>
-      <button id="button-about" class="button" onclick="buttonSwitch(this)">About</button>
+      <button id="button-research" class="button button-active" onclick="buttonSwitch(this)">Research</button>
+      <button id="button-about"    class="button"               onclick="buttonSwitch(this)">About</button>
     </section>
-    <div id="Research" class = "thread">
-    <section>
-      <h3>Publications 
-        <!-- & Preprints -->
-      </h3>
-      <article>
-          <table>
-              <tbody>
-                  <td>
-                    <a href="https://roahmlab.github.io/crows/">
-                      <img src="assets/papers/crows.gif" class="paper-video">
-                    </a>
-                  </td>      
-                  <td valign="top">
-                      <p class="paper-title" >
-                        Conformalized Reachable Sets for Obstacle Avoidance With Spheres
-                      </p>
-                      <p class="paper-author">
-                          <span class="myname">Yongseok Kwon</span>, Jonathan Michaux, Seth Isaacson, Bohao Zhang, Matthew Ejakov, Katherine A. Skinner, and Ram Vasudevan
-                      </p>
-                      <p class="paper-conference">
-                        <i>IEEE International Conference on Robotics and Automation (ICRA)</i>, 2025.
-                      </p>
-                      <p class="A">
-                      <a href="https://roahmlab.github.io/crows/">
-                        <i class="fa-solid fa-link" style="vertical-align: -.5px;"></i> project page
-                      </a>
-                      &nbsp;&#8226;&nbsp;
-                      <a href="https://arxiv.org/abs/2410.09924">
-                        <!-- <i class="fa-regular fa-file"></i>  -->
-                        <i class="ai ai-arxiv" style="font-size: 17px; vertical-align: -0.5px;"></i> paper
-                      </a>
-                      &nbsp;&#8226;&nbsp;
-                      <a href="https://github.com/roahmlab/crows">
-                        <i class="fa-brands fa-github" style="font-size: 16px;"></i> code
-                      </a>
-                      &nbsp;
-                      </p>
-                  </td>
-              </tbody>
-          </table>
-      </article>
-      <article>
-          <table>
-              <tbody>
-                  <td>
-                    <a href="https://roahmlab.github.io/RDF/">
-                      <img src="assets/papers/rdf.jpg" class="paper-image">
-                    </a>
-                  </td>      
-                  <td valign="top">
-                      <p class="paper-title">
-                        Reachability-based Trajectory Design with Neural Implicit Safety Constraints
-                      </p>
-                      <p class="paper-author">
-                          Jonathan Michaux, Qingyi Chen, <span class="myname">Yongseok Kwon</span>, and Ram Vasudevan
-                      </p>
-                      <p class="paper-conference">
-                        <i>Robotics: Science and Systems (RSS)</i>, 2023.
-                      </p>
-                      <p class="A">
-                      <a href="https://roahmlab.github.io/RDF/">
-                        <i class="fa-solid fa-link" style="vertical-align: -.5px;"></i> project page
-                      </a>
-                      &nbsp;&#8226;&nbsp;
-                      <a href="https://arxiv.org/abs/2302.07352">
-                        <i class="ai ai-arxiv" style="font-size: 17px; vertical-align: -0.5px;"></i>
-                        paper
-                      </a>
-                      &nbsp;&#8226;&nbsp;
-                      <a href="https://github.com/roahmlab/RDF">
-                        <i class="fa-brands fa-github" style="font-size: 16px;"></i> code
-                      </a>
-                      &nbsp;
-                      </p>
-                  </td>                  
-              </tbody>
-          </table>
-      </article>
-    </section>
-    <section> 
-        <h3>Software Contributions</h3>   
-        <article>
-          <table>
-              <tbody>
-                  <td><a href="https://github.com/roahmlab/zonopy"><img src="assets/software/zonopy.gif" class="library-image"></a></td>      
-                  <td valign="top">
-                      <p class="library-title">
-                        ZONOPY: Zonotopes in Python
-                      </p>
-                      <p class="library-content">
-                        A Python library for handling various continuous sets (e.g., intervals, zonotopes, and polynomial zonotopes) to compute reachable sets in robotic arm kinematics and dynamics, with support for parallel computation.
-                      </p>
-                      <p class="A">
-                        <span class="library-item">&#9656; zonopy&thinsp;:&nbsp;</span> 
-                        <a href="https://github.com/roahmlab/zonopy"><i class="fa-brands fa-github" style="font-size: 16px;"></i> code</a>&nbsp;&nbsp;&#8226;&nbsp;
-                        <a href="https://roahmlab.github.io/zonopy/latest/"><i class="fa-solid fa-book"></i> documentation</a>&nbsp;
-                      </p>
-                      <p class="A">
-                        <span class="library-item">&#9656; zonopy-robots&thinsp;:&nbsp;</span> 
-                        <a href="https://github.com/roahmlab/zonopy-robots"><i class="fa-brands fa-github" style="font-size: 16px;"></i> code</a>&nbsp;&nbsp;&#8226;&nbsp;
-                        <a href="https://roahmlab.github.io/zonopy-robots/latest/"><i class="fa-solid fa-book"></i> documentation</a>&nbsp;
-                      </p>
-                  </td>
-                  
-              </tbody>
-          </table>
+
+    <!-- ── Research ───────────────────────────────────────── -->
+    <div id="Research" class="thread">
+      <section>
+        <h3>Publications</h3>
+        <article class="entry">
+          <div class="entry-media">
+            <a href="https://roahmlab.github.io/crows/">
+              <img src="assets/papers/crows.gif" class="paper-gif" alt="CROWS">
+            </a>
+          </div>
+          <div class="entry-body">
+            <p class="entry-title">Conformalized Reachable Sets for Obstacle Avoidance With Spheres</p>
+            <p class="entry-meta"><span class="myname">Yongseok Kwon</span>, Jonathan Michaux, Seth Isaacson, Bohao Zhang, Matthew Ejakov, Katherine A. Skinner, and Ram Vasudevan</p>
+            <p class="entry-meta"><i>IEEE International Conference on Robotics and Automation (ICRA)</i>, 2025.</p>
+            <p class="entry-links">
+              <a href="https://roahmlab.github.io/crows/"><i class="fa-solid fa-link"></i> project page</a>
+              &nbsp;•&nbsp;
+              <a href="https://arxiv.org/abs/2410.09924"><i class="ai ai-arxiv"></i> paper</a>
+              &nbsp;•&nbsp;
+              <a href="https://github.com/roahmlab/crows"><i class="fa-brands fa-github"></i> code</a>
+            </p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry-media">
+            <a href="https://roahmlab.github.io/RDF/">
+              <img src="assets/papers/rdf.png" class="paper-img" alt="RDF">
+            </a>
+          </div>
+          <div class="entry-body">
+            <p class="entry-title">Reachability-based Trajectory Design with Neural Implicit Safety Constraints</p>
+            <p class="entry-meta">Jonathan Michaux, Qingyi Chen, <span class="myname">Yongseok Kwon</span>, and Ram Vasudevan</p>
+            <p class="entry-meta"><i>Robotics: Science and Systems (RSS)</i>, 2023.</p>
+            <p class="entry-links">
+              <a href="https://roahmlab.github.io/RDF/"><i class="fa-solid fa-link"></i> project page</a>
+              &nbsp;•&nbsp;
+              <a href="https://arxiv.org/abs/2302.07352"><i class="ai ai-arxiv"></i> paper</a>
+              &nbsp;•&nbsp;
+              <a href="https://github.com/roahmlab/RDF"><i class="fa-brands fa-github"></i> code</a>
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section>
+        <h3>Software Contributions</h3>
+        <article class="entry">
+          <div class="entry-media">
+            <a href="https://github.com/roahmlab/zonopy">
+              <img src="assets/software/zonopy.gif" class="software-img" alt="zonopy">
+            </a>
+          </div>
+          <div class="entry-body">
+            <p class="entry-title">ZONOPY: Zonotopes in Python</p>
+            <p class="entry-content">A Python library for handling various continuous sets (e.g., intervals, zonotopes, and polynomial zonotopes) to compute reachable sets in robotic arm kinematics and dynamics, with support for parallel computation.</p>
+            <p class="entry-links">
+              <span class="entry-label">&#9656; zonopy :</span>
+              <a href="https://github.com/roahmlab/zonopy"><i class="fa-brands fa-github"></i> code</a>
+              &nbsp;•&nbsp;
+              <a href="https://roahmlab.github.io/zonopy/latest/"><i class="fa-solid fa-book"></i> documentation</a>
+            </p>
+            <p class="entry-links">
+              <span class="entry-label">&#9656; zonopy-robots :</span>
+              <a href="https://github.com/roahmlab/zonopy-robots"><i class="fa-brands fa-github"></i> code</a>
+              &nbsp;•&nbsp;
+              <a href="https://roahmlab.github.io/zonopy-robots/latest/"><i class="fa-solid fa-book"></i> documentation</a>
+            </p>
+          </div>
         </article>
       </section>
     </div>
-    <div id="About" class = "thread" style="display:none">
-    <section>
-      <h3>Education</h3>
-      <article>
-        <table>
-          <tbody>
-              <td><img src="assets/logos/upenn.png" class="school-image" style="border: white; width: 70px; padding: 1px 5px 1px 5px;"></td>
-              <td valign="top">
-                  <p class="school-name">
-                    University of Pennsylvania
-                  </p>
-                  <p class="school-period">
-                    August 2025 &ndash; Present
-                  </p>
-                  <p class="school-degree">
-                    Ph.D. in Electrical and Systems Engineering
-                  </p>
-              </td>
-              
-          </tbody>
-      </table>
-      </article>
 
-      <article>
-        <table>
-          <tbody>
-              <td><img src="assets/logos/umich.jpg" border-radius= "0px" class="school-image"></td>      
-              <td valign="top">
-                  <p class="school-name">
-                    University of Michigan
-                  </p>
-                  <p class="school-period">
-                    August 2020 &ndash; August 2022
-                  </p>
-                  <p class="school-degree">
-                    M.S.E. in Mechanical Engineering
-                  </p>
-              </td>
-              
-          </tbody>
-      </table>
-      </article>
-      <article>
-        <table>
-          <tbody>
-              <td><img src="assets/logos/unist.png" class="school-image"></td>      
-              <td valign="top">
-                  <p class="school-name">
-                    Ulsan National Institute of Science and Technology (UNIST)
-                  </p>
-                  <p class="school-period">
-                    March 2016 &ndash; Februrary 2020
+    <!-- ── About ───────────────────────────────────────────── -->
+    <div id="About" class="thread" style="display:none">
+      <section>
+        <h3>Education</h3>
+        <article class="entry">
+          <div class="entry-media entry-media--logo">
+            <img src="assets/logos/upenn.png" class="school-logo school-logo--upenn" alt="UPenn">
+          </div>
+          <div class="entry-body">
+            <p class="entry-title">University of Pennsylvania</p>
+            <p class="entry-meta">August 2025 &ndash; Present</p>
+            <p class="entry-meta">Ph.D. in Electrical and Systems Engineering</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry-media entry-media--logo">
+            <img src="assets/logos/umich.jpg" class="school-logo" alt="UMich">
+          </div>
+          <div class="entry-body">
+            <p class="entry-title">University of Michigan</p>
+            <p class="entry-meta">August 2020 &ndash; August 2022</p>
+            <p class="entry-meta">M.S.E. in Mechanical Engineering</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry-media entry-media--logo">
+            <img src="assets/logos/unist.png" class="school-logo" alt="UNIST">
+          </div>
+          <div class="entry-body">
+            <p class="entry-title">Ulsan National Institute of Science and Technology (UNIST)</p>
+            <p class="entry-meta">March 2016 &ndash; February 2020</p>
+            <p class="entry-meta">B.S. in Mechanical Engineering, Human Factors Engineering</p>
+          </div>
+        </article>
+      </section>
 
-                  </p>
-                  <p class="school-degree">
-                    B.S. in Mechanical Engineering, Human Factors Engineering
-                  </p>
-              </td>
-              
-          </tbody>
-      </table>
-      </article>
-    </section>
-    <section>
-      <h3>Experience</h3>
-      <article>
-        <table>
-          <tbody>
-              <td class="logo-cell"><img src="assets/logos/amplab_logo.png" class="job-image"></td>      
-              <td valign="top">
-                  <p class="job-name">
-                    Autonomous Manipulation @ Penn (AMP) Lab
-                  </p>
-                  <p class="job-period">
-                    August 2025 &ndash; Present
-                  </p>
-                  <p class="job-position">
-                    Research Assistant
-                  </p>
-              </td>
-          </tbody>
-      </table>
-      </article>
-
-      <article>
-        <table>
-          <tbody>
-              <td class="logo-cell"><img src="assets/logos/roahmlab_logo.png" class="job-image"></td>      
-              <td valign="top">
-                  <p class="job-name">
-                    Robotics and Optimization for Analysis of Human Motion (ROAHM) Lab
-                  </p>
-                  <p class="job-period">
-                    July 2021 &ndash; January 2023, &nbsp;August 2024 &ndash; May 2025
-                  </p>
-                  <p class="job-position">
-                    Researcher
-                  </p>
-              </td>
-          </tbody>
-      </table>
-      </article>
-
-      <article>
-        <table>
-          <tbody>
-              <td class="logo-cell"><img src="assets/logos/iifa_logo.png" class="job-image"></td>      
-              <td valign="top">
-                  <p class="job-name">
-                    Institute of Innovation for Future Army (IIFA) in Republic of Korea Army
-                  </p>
-                  <p class="job-period">
-                    Februrary 2023 &ndash; August 2024
-                  </p>
-                  <p class="job-position">
-                    Robotics Researcher (Mandatory Military Obligation)
-                  </p>
-              </td>
-              
-          </tbody>
-      </table>
-      </article>
-    </section>
+      <section>
+        <h3>Experience</h3>
+        <article class="entry">
+          <div class="entry-media entry-media--logo">
+            <img src="assets/logos/amplab_logo.png" class="job-logo logo-light" alt="AMP Lab">
+            <img src="assets/logos/amplab_logo_dark.png" class="job-logo logo-dark" alt="AMP Lab">
+          </div>
+          <div class="entry-body">
+            <p class="entry-title">Autonomous Manipulation @ Penn (AMP) Lab</p>
+            <p class="entry-meta">August 2025 &ndash; Present</p>
+            <p class="entry-meta">Research Assistant</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry-media entry-media--logo">
+            <img src="assets/logos/roahmlab_logo.png" class="job-logo logo-light" alt="ROAHM Lab">
+            <img src="assets/logos/roahmlab_logo_dark.png" class="job-logo logo-dark" alt="ROAHM Lab">
+          </div>
+          <div class="entry-body">
+            <p class="entry-title">Robotics and Optimization for Analysis of Human Motion (ROAHM) Lab</p>
+            <p class="entry-meta">July 2021 &ndash; January 2023,&nbsp; August 2024 &ndash; May 2025</p>
+            <p class="entry-meta">Researcher</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry-media entry-media--logo">
+            <img src="assets/logos/iifa_logo.png" class="job-logo" alt="IIFA">
+          </div>
+          <div class="entry-body">
+            <p class="entry-title">Institute of Innovation for Future Army (IIFA) in Republic of Korea Army</p>
+            <p class="entry-meta">February 2023 &ndash; August 2024</p>
+            <p class="entry-meta">Robotics Researcher (Mandatory Military Obligation)</p>
+          </div>
+        </article>
+      </section>
     </div>
-    <footer> <small> Inspired by <a href="https://andyzeng.github.io/">Andy Zhang's webpage</a></small> </footer>
+
+    <footer><small>Made by <a href="https://kwonyos.github.io/">myself</a></small></footer>
+
     <script>
       function buttonSwitch(self) {
-        var onColor = "black";
-        var offColor = "#dcdcdc";
-        var thisButtonInd = Object.keys($(".button")).map(function (key) { return $(".button")[key].id; }).indexOf(self.id);
-        var thisButtonID = '#'+$(".button")[thisButtonInd].id;
-        
-
-        var thisThreadID = '#'+$(".thread")[thisButtonInd].id;
-        //alert($(".button").length)
-        $(thisButtonID).css("color",onColor);
-        $(thisButtonID).hover(function(){$(this).css("color",onColor);}, function(){$(this).css("color",onColor);});
-        $(thisThreadID).show();
-        for(let buttonInd = 0; buttonInd<$(".button").length; buttonInd++){
-          if(buttonInd != thisButtonInd){
-            otherButtonID = '#'+$(".button")[buttonInd].id;
-            otherThreadID = '#'+$(".thread")[buttonInd].id;
-            $(otherButtonID).css("color",offColor);
-            $(otherButtonID).hover(function(){
-              $(this).css("color",onColor);
-              }, function(){
-              $(this).css("color",offColor)
-            });
-            $(otherThreadID).hide();
-          }
-        }
+        const buttons = Array.from(document.querySelectorAll('.button'));
+        const threads = Array.from(document.querySelectorAll('.thread'));
+        const idx = buttons.indexOf(self);
+        buttons.forEach((btn, i) => {
+          btn.classList.toggle('button-active', i === idx);
+          threads[i].style.display = i === idx ? '' : 'none';
+        });
       }
+
+      function toggleTheme() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        document.documentElement.setAttribute('data-theme', isDark ? '' : 'dark');
+        document.querySelector('#theme-toggle i').className = isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+        localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      }
+
+      (function () {
+        if (localStorage.getItem('theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          document.querySelector('#theme-toggle i').className = 'fa-solid fa-sun';
+        }
+      })();
     </script>
   </body>
 </html>

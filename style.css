@@ -1,0 +1,345 @@
+/* ─── Fonts ──────────────────────────────────────────── */
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+/* ─── Variables ──────────────────────────────────────── */
+:root {
+  --grey-0: #494949;
+  --grey-1: #707070;
+  --grey-2: #969696;
+  --grey-3: #dcdcdc;
+  --blue:   #65b2ff;
+  --orange: #ffc965;
+}
+
+/* ─── Base ───────────────────────────────────────────── */
+html { overflow-y: scroll; }
+
+body {
+  margin: 0;
+  line-height: 1.55;
+  font-size: 14px;
+  font-family: 'Roboto', 'Noto Sans', sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 14px;
+}
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 12px 0 12px;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { color: var(--orange); }
+
+p { margin: 0; padding: 0 0 6px; }
+
+/* ─── Layout ─────────────────────────────────────────── */
+section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 28px 24px;
+  background: #fff;
+  border-bottom: 1px solid var(--grey-3);
+}
+
+#profile { padding-top: 4em; max-width: 800px; }
+
+article { padding-bottom: 18px; }
+
+footer {
+  font-size: 14px;
+  text-align: center;
+  margin: 16px 0 40px;
+}
+
+/* ─── Profile ────────────────────────────────────────── */
+.profile-row {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr);
+  grid-template-areas:
+    "pic bio"
+    "contact contact";
+  column-gap: 14px;
+  row-gap: 8px;
+  align-items: start;
+  margin-bottom: 10px;
+}
+.profile-pic {
+  grid-area: pic;
+  width: 130px;
+  border: 1px solid var(--grey-3);
+  border-radius: 10px;
+  display: block;
+}
+.profile-contact {
+  grid-area: contact;
+  justify-self: start;
+  width: max-content;
+  max-width: 100%;
+  margin-top: 0;
+  font-size: 14px;
+}
+.profile-links {
+  align-items: center;
+}
+.profile-item {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  line-height: 1.5;
+}
+.profile-email {
+  display: inline-flex;
+  align-items: center;
+  color: var(--grey-2);
+  padding-left: 0;
+  margin-top: 6px;
+  white-space: nowrap;
+}
+.profile-text {
+  grid-area: bio;
+  min-width: 0;
+  max-width: none;
+  width: 100%;
+  padding-top: 2px;
+}
+.sep { color: #999;}
+
+/* ─── Buttons ────────────────────────────────────────── */
+.button-group { padding: 14px 28px; max-width: 800px;}
+
+button {
+  border: 0;
+  padding: 0;
+  margin: 0 22px 0 0;
+  background: #fff;
+  font-family: inherit;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--grey-3);
+  cursor: pointer;
+}
+button:hover,
+button.button-active { color: #000; }
+
+/* ─── Entry layout (papers, education, experience) ───── */
+.entry {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.entry-media        { flex-shrink: 0; }
+.entry-media--logo  {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.entry-body         { flex: 1; min-width: 0; }
+.entry-body p       { padding-left: 0; }
+
+/* ─── Images ─────────────────────────────────────────── */
+.paper-gif,
+.paper-img,
+.software-img {
+  width: 160px;
+  display: block;
+  border: 1px solid var(--grey-3);
+  border-radius: 6px;
+}
+.paper-img {
+  box-sizing: border-box;
+}
+
+.school-logo {
+  width: 75px;
+  border: 1px solid var(--grey-3);
+  border-radius: 6px;
+}
+.school-logo--upenn {
+  width: 60px;
+  border: none;
+  padding: 2px 6px;
+}
+
+.job-logo { width: 110px; }
+
+/* ─── Entry text ─────────────────────────────────────── */
+.entry-title {
+  font-size: 15px;
+  font-weight: 600;
+  padding-bottom: 4px;
+}
+.entry-meta {
+  color: var(--grey-2);
+  padding-bottom: 2px;
+}
+.entry-content {
+  color: var(--grey-1);
+  padding-bottom: 4px;
+}
+.entry-links {
+  color: var(--grey-3);
+  padding-bottom: 2px;
+}
+.entry-label {
+  color: var(--grey-2);
+  font-size: 13px;
+}
+.myname {
+  font-weight: 700;
+  color: var(--grey-1);
+}
+
+/* ─── Theme toggle ───────────────────────────────────── */
+#theme-toggle {
+  position: fixed;
+  top: 1em;
+  right: 1.2em;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--grey-3);
+  background: #fff;
+  color: var(--grey-1);
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  margin: 0;
+  padding: 0;
+  transition: color 0.2s, border-color 0.2s;
+}
+#theme-toggle:hover { color: var(--orange); border-color: var(--orange); }
+
+/* ─── Dark mode ──────────────────────────────────────── */
+[data-theme="dark"] body               { background: #1e2130; color: #e0e0e0; }
+[data-theme="dark"] section            { background: #1e2130; border-bottom-color: #2a2a2a; }
+[data-theme="dark"] button             { background: #1e2130; color: #666; }
+[data-theme="dark"] button:hover,
+[data-theme="dark"] button.button-active { color: #e0e0e0; }
+[data-theme="dark"] #theme-toggle      { background: #1e1e1e; border-color: #3a3a3a; color: #bbb; }
+[data-theme="dark"] #theme-toggle:hover { color: var(--orange); border-color: var(--orange); }
+[data-theme="dark"] .profile-pic       { border-color: #2a2a2a; }
+[data-theme="dark"] .profile-email     { color: #888; }
+[data-theme="dark"] .sep               { color: #555; }
+[data-theme="dark"] .entry-meta        { color: #777; }
+[data-theme="dark"] .entry-content     { color: #999; }
+[data-theme="dark"] .entry-links       { color: #777; }
+[data-theme="dark"] .entry-label       { color: #777; }
+[data-theme="dark"] .myname            { color: #999; }
+[data-theme="dark"] .paper-gif,
+[data-theme="dark"] .paper-img,
+[data-theme="dark"] .software-img      { border-color: #2a2a2a; }
+[data-theme="dark"] .school-logo       { border-color: #2a2a2a; }
+[data-theme="dark"] footer             { color: #777; }
+.logo-dark                             { display: none; }
+[data-theme="dark"] .logo-light        { display: none; }
+[data-theme="dark"] .logo-dark         { display: block; }
+
+/* ─── Responsive: tablet ─────────────────────────────── */
+@media (max-width: 850px) {
+  section { padding: 0 5% 20px; }
+}
+
+/* ─── Responsive: mobile ─────────────────────────────── */
+@media (max-width: 600px) {
+  h1     { font-size: 28px; text-align: center; }
+
+
+  #profile { padding-top: 2.5em; }
+
+  .profile-row {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "pic"
+      "contact"
+      "bio";
+    justify-items: center;
+    row-gap: 12px;
+  }
+  .profile-pic {
+    width: 110px;
+  }
+  .profile-contact {
+    width: 100%;
+    max-width: min(100%, calc(100vw - 40px));
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+  }
+  .profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    max-width: 100%;
+    gap: 0 6px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .profile-item {
+    justify-content: center;
+    width: auto;
+    max-width: 100%;
+  }
+  .profile-text {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 0;
+  }
+  .profile-email {
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    max-width: 100%;
+    margin: 6px auto 0;
+  }
+
+  #About .entry-title,
+  #About .entry-meta {
+    text-align: center;
+  }
+
+  .entry {
+    flex-direction: column;
+    align-items: center;
+  }
+  .entry-media,
+  .entry-media--logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .paper-gif,
+  .paper-img,
+  .software-img {
+    width: min(260px, 80%);
+    margin: 0 auto;
+  }
+  .profile-pic { width: min(140px, 55%); }
+  .school-logo { width: min(90px, 40%); }
+  .school-logo--upenn { width: min(78px, 33%); }
+  .job-logo    { width: min(140px, 40%); }
+  .entry-body  { width: 100%; }
+}
