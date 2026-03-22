@@ -46,6 +46,8 @@ a:hover { color: var(--orange); }
 
 p { margin: 0; padding: 0 0 6px; }
 
+.mobile-break { display: none; }
+
 /* ─── Layout ─────────────────────────────────────────── */
 section {
   max-width: 800px;
@@ -242,7 +244,7 @@ button.button-active,
 
 /* ─── Dark mode ──────────────────────────────────────── */
 [data-theme="dark"] body               { background: #1e2130; color: #e0e0e0; }
-[data-theme="dark"] section            { background: #1e2130; border-bottom-color: #2a2a2a; }
+[data-theme="dark"] section            { background: #1e2130; border-bottom-color: #3e3e3e; }
 [data-theme="dark"] button             { background: #1e2130; color: #666; }
 [data-theme="dark"] button:hover,
 [data-theme="dark"] button.button-active { color: #e0e0e0; }
@@ -333,6 +335,7 @@ button.button-active,
     width: auto;
     max-width: 100%;
     margin: 6px auto 0;
+    font-size: 12.5px;
   }
 
   #About .entry-title,
@@ -361,4 +364,29 @@ button.button-active,
   .school-logo--upenn { width: min(78px, 33%); }
   .job-logo    { width: min(140px, 40%); }
   .entry-body  { width: 100%; }
+
+
+  .mobile-break {
+    display: block;
+  }
+
+  .mobile-left-entries .entry-body {
+    box-sizing: border-box;
+    padding-left: 14px;
+  }
+
+  .mobile-left-entries .entry-title,
+  .mobile-left-entries .entry-meta,
+  .mobile-left-entries .entry-content,
+  .mobile-left-entries .entry-links {
+    text-align: left;
+  }
+
+  .mobile-left-entries .entry-links {
+    word-break: normal;
+  }
+
+  .mobile-left-entries .entry-body p {
+    padding-left: 0;
+  }
 }
